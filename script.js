@@ -8,13 +8,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         htmlElement.setAttribute('data-theme', newTheme);
         
-        // Cambiar icono del botón
         themeToggleBtn.innerHTML = newTheme === 'dark' 
             ? '<i class="fa-solid fa-moon"></i>' 
             : '<i class="fa-solid fa-sun"></i>';
     });
 
-    // 2. Cambio de Idioma (Español / Inglés básico interactivo)
+    // 2. Cambio de Idioma (Español / Inglés interactivo)
     const langToggleBtn = document.getElementById('lang-toggle');
     let currentLang = 'es';
 
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
         langToggleBtn.textContent = currentLang === 'es' ? 'EN' : 'ES';
         htmlElement.setAttribute('lang', currentLang);
 
-        // Actualizar textos dinámicamente con atributos data-es / data-en
         document.querySelectorAll('[data-es]').forEach(el => {
             const translation = el.getAttribute(`data-${currentLang}`);
             if (translation) {
@@ -32,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Colapsar / Expandir Menú Lateral (Escritorio y Móvil)
+    // 3. Colapsar / Expandir Menú Lateral y Móvil
     const sidebar = document.getElementById('sidebar');
     const sidebarToggleBtn = document.getElementById('sidebar-toggle');
     const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -48,12 +46,12 @@ document.addEventListener('DOMContentLoaded', () => {
         sidebar.classList.toggle('mobile-open');
     });
 
-    // Cerrar menú móvil al hacer clic en una opción
-    document.querySelectorAll('.sidebar-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth <= 900) {
-                sidebar.classList.remove('mobile-open');
-            }
-        });
+    // 4. Marcar automáticamente la página activa en los menús
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll('.nav-links a, .sidebar-menu a').forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPath || (currentPath === "" && href === "index.html")) {
+            link.classList.add('active-page');
+        }
     });
 });
