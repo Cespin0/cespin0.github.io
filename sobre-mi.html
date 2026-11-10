@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="top-nav">
+        <div class="nav-brand"><a href="index.html" class="logo"><span>&lt;/&gt;</span> PortfolioCV</a></div>
+        <nav class="nav-links">
+            <a href="experiencia.html" data-es="Experiencia Laboral" data-en="Work Experience">Experiencia Laboral</a>
+            <a href="titulacion.html" data-es="Titulación Académica" data-en="Education">Titulación Académica</a>
+            <a href="skills.html" data-es="Skills" data-en="Skills">Skills</a>
+            <a href="sobre-mi.html" data-es="Sobre mí" data-en="About Me">Sobre mí</a>
+            <a href="contacto.html" data-es="Contacto" data-en="Contact">Contacto</a>
+        </nav>
+        <div class="nav-actions">
+            <button id="theme-toggle" aria-label="Cambiar tema"><i class="fa-solid fa-moon"></i></button>
+            <button id="lang-toggle" aria-label="Cambiar idioma">EN</button>
+            <button id="hamburger-btn" aria-label="Menú lateral"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+    <div class="layout-wrapper">
+        <aside class="sidebar" id="sidebar">
+            <button id="sidebar-toggle" class="sidebar-collapse-btn"><i class="fa-solid fa-chevron-left"></i></button>
+            <ul class="sidebar-menu">
+                <li><a href="index.html"><i class="fa-solid fa-user-tie"></i><span class="link-text" data-es="Presentación" data-en="Overview">Presentación</span></a></li>
+                <li><a href="coordinacion.html"><i class="fa-solid fa-users-gear"></i><span class="link-text" data-es="Coordinación" data-en="Coordination">Coordinación</span></a></li>
+                <li><a href="soporte.html"><i class="fa-solid fa-headset"></i><span class="link-text" data-es="Soporte" data-en="Support">Soporte</span></a></li>
+                <li><a href="atencion-cliente.html"><i class="fa-solid fa-comments"></i><span class="link-text" data-es="Atención al cliente" data-en="Customer Service">Atención al cliente</span></a></li>
+                <li><a href="hosteleria.html"><i class="fa-solid fa-champagne-glasses"></i><span class="link-text" data-es="Hostelería y eventos" data-en="Hospitality & Events">Hostelería y eventos</span></a></li>
+            </ul>
+        </aside>
+        <main class="main-content">
+            <section class="content-section">
+                <h1 data-es="Sobre Mí" data-en="About Me">Sobre Mí</h1>
+                <p class="lead" data-es="Apasionado por la tecnología, la programación y el factor humano en la gestión de servicios. Disfruto construyendo puentes entre el desarrollo técnico y la experiencia directa con el usuario final." data-en="Passionate about technology, programming, and the human factor in service management. I enjoy building bridges between technical development and direct end-user experience.">
+                    Apasionado por la tecnología, la programación y el factor humano en la gestión de servicios. Disfruto construyendo puentes entre el desarrollo técnico y la experiencia directa con el usuario final.
+                </p>
+            </section>
+        </main>
+    </div>
+    <footer class="footer-logos">
+        <p data-es="Empresas en las que he aportado valor y experiencia:" data-en="Companies where I have contributed value and experience:">Empresas en las que he aportado valor y experiencia:</p>
+        <div class="logo-track"><span>Econocom</span><span>Amura</span><span>Nextlane</span><span>Event Industries</span><span>Dutchband</span><span>Emergia</span><span>El Corte Inglés</span></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
